@@ -72,20 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'RealEstate.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'projekt',
-        'HOST': 'localhost',
-        'USER': 'postgres',
-        'PASSWORD': 'coderslab',
-    }
-}
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -126,3 +112,10 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media/images')
 MEDIA_URL = '/media/'
+
+try:
+    from RealEstate.local_settings import DATABASES
+except ModuleNotFoundError:
+    print("Brak konfiguracji bazy danych w pliku local_settings.py!")
+    print("Uzupełnij dane i spróbuj ponownie!")
+    exit(0)
