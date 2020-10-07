@@ -2,7 +2,7 @@
 
  Real estate management application.
 
-### Information is stored in PostgreSQL. Application functions:
+### Application functions:
 
 * Property browsing and searching (for all users),
 * Adding, editing, deleting properties (for logged-in users)
