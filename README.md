@@ -13,5 +13,3 @@
 * PostgreSQL
 * HTML, CSS
 * bootstrap
-
- Information is stored in PostgreSQL. 
